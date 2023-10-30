@@ -13,7 +13,7 @@ def main():
 — coded by NowMeee
 > note : dont use http/https on list sites
 ''')
-    api_key = input("Masukan apikey: ")  # Prompt the user for their API key
+    api_key = input("Masukan apikey: ")  
     domain_list_file = input("Enter File: ")
     output_file = input("Enter output: ")
 
@@ -26,14 +26,14 @@ def main():
             subdomain_count = len(subdomains)
             
             if subdomain_count == 0:
-                print(f"\x1b[31m[{domain} >> {subdomain_count}]\x1b[0m")  # Red text for 0 subdomains
+                print(f"\x1b[31m[{domain} >> {subdomain_count}]\x1b[0m")  
             elif 1 <= subdomain_count <= 20:
-                print(f"\x1b[33m[{domain} >> {subdomain_count}]\x1b[0m")  # Yellow text for 1-20 subdomains
+                print(f"\x1b[33m[{domain} >> {subdomain_count}]\x1b[0m")  
             else:
-                print(f"\x1b[32m[{domain} >> {subdomain_count}]\x1b[0m")  # Green text for more than 20 subdomains
+                print(f"\x1b[32m[{domain} >> {subdomain_count}]\x1b[0m")  
             if subdomains:
                 output.write("\n".join(subdomains) + "\n")
-                output.flush()  # Ensure data is written immediately
+                output.flush()  
 
     print(f"Subdomains found and saved in {output_file}")
 
